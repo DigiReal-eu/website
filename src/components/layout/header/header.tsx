@@ -5,9 +5,12 @@ import HeaderLogo from "../../../assets/images/digireal_logo_full.png";
 const Header = () => {
     return (
         <div className="header">
-            <div className="header__images">
-                <img className="header__image" src={HeaderLogo} />
+            <div className="subHeader">
+                <div className="header__images">
+                    <img className="header__logo" src={HeaderLogo} alt="Digireal Logo" />
+                </div>
             </div>
+
         </div>
     );
 };
