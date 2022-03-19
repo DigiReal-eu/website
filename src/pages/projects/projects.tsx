@@ -1,12 +1,12 @@
-import React from "react";
-import "./header.scss";
+import React from 'react';
+import './projects.scss';
 
-const Projects = () => {
+function Projects() {
     return (
         <div className="projects">
             <p>Projects</p>
         </div>
     );
-};
+}
 
 export default Projects;
