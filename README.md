@@ -6,8 +6,9 @@ This repository contains the React frontend for the DigiReal website.
 
 ## Quick links
 
-* [Coding guidelines](https://github.com/DigiReal-eu/website) (to be created)
-* [ESLint](https://github.com/DigiReal-eu/website) (to be created)
+* [Getting Started](https://github.com/DigiReal-eu/website/wiki/Getting-Started)
+* [Coding guidelines](https://github.com/DigiReal-eu/website/wiki/Coding-Guidelines) (being created..)
+* [ESLint](https://github.com/DigiReal-eu/website/wiki/ESLint) (being created..)
 
 ## Scripts
 In the project directory, you can run:
