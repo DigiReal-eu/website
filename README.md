@@ -1,9 +1,15 @@
-# Getting Started with Create React App
+# DigiReal Website
+![ESLint](https://github.com/DigiReal-eu/website/workflows/CI%20lint/badge.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This repository contains the React frontend for the DigiReal website.
 
+## Quick links
+
+* [Coding guidelines](https://github.com/DigiReal-eu/website) (to be created)
+* [ESLint](https://github.com/DigiReal-eu/website) (to be created)
+
+## Scripts
 In the project directory, you can run:
 
 ### `npm start`
@@ -18,6 +24,11 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run lint`
+
+Runs ESLint for all files with a .tsx extension.\
+See the section about [ESLint](https://github.com/DigiReal-eu/website) for more information.
 
 ### `npm run build`
 
