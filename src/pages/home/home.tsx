@@ -1,19 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import ChangeLanguageButton from '../../components/changeLanguageButton/changeLanguageButton';
 import Footer from '../../components/layout/footer/footer';
 import Founders from '../../components/layout/founders/founders';
 import Header from '../../components/layout/header/header';
 import './home.scss';
 
 function Home() {
+    const { t } = useTranslation();
+
     return (
         <div className="home">
             <Header />
             <p>
-                Welkom bij
+                {t('home.welcome_to')}
                 <br />
                 DIGIREAL.XL
-                <button type="button">English/Dutch</button>
             </p>
+            <ChangeLanguageButton />
 
             <p>
                 Zet twee onderwijsinstellingen die partner zijn van MindLabs
