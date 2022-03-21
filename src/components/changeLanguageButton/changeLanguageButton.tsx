@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './changeLanguageButton.scss';
 
 function ChangeLanguageButton() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
 
     const changeLanguage = (e: ChangeEvent<HTMLInputElement>) => {
         i18n.changeLanguage(e.target.value);
@@ -14,7 +14,12 @@ function ChangeLanguageButton() {
             <input type="radio" value="en" name="language" />
             {' '}
             English
-            <input type="radio" value="nl" name="language" defaultChecked />
+            <input
+                type="radio"
+                value="nl"
+                name="language"
+                defaultChecked
+            />
             {' '}
             Dutch
         </div>
