@@ -8,9 +8,12 @@ const Home = () => {
     return (
         <div className="home">
             <Header />
-            <button className="language">English/Dutch</button>
-            <h2>Welkom bij</h2>
-            <h1>DIGIREAL.XL</h1>
+            <div className="title">
+                <button className="language">English/Dutch</button>
+                <h2>Welkom bij</h2>
+                <h1>DIGIREAL.XL</h1>
+            </div>
+
 
             <div className="container">
                 <p className="content">
