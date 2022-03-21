@@ -1,0 +1,21 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+
+name: CI lint
+
+on:
+  pull_request:
+    branches: [ development, staging, master ]
+
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+          
+      - name: Install Dependencies
+        run: npm ci
+        
+      - name: Code Linting 
+        run: npm run lint

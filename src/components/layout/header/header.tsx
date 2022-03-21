@@ -1,18 +1,23 @@
-import React from "react";
-import "./header.scss";
-import HeaderLogo from "../../../assets/images/digireal_logo_full.png";
+import React from 'react';
+import './header.scss';
+import HeaderLogo from '../../../assets/images/digireal_logo_full.png';
 
-const Header = () => {
+function Header() {
     return (
         <div className="header">
             <div className="subHeader">
                 <div className="header__images">
-                    <img className="header__logo" src={HeaderLogo} alt="Digireal Logo" />
+                    <img
+                        className="header__image"
+                        src={HeaderLogo}
+                        alt="DigiReal logo"
+                    />
                 </div>
             </div>
 
+
         </div>
     );
-};
+}
 
 export default Header;
