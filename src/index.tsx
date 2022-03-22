@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 import './index.scss';
-import './utils/i18n';
+import './config/i18nConfig';
 
 ReactDOM.render(
     <React.StrictMode>
