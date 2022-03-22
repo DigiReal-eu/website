@@ -1,0 +1,29 @@
+.partner {
+  border: solid 1px #B2B2B2;
+  height: 150px;
+  width: auto;
+  margin: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.partnerImage {
+  align-self: center;
+  max-width: 200px;
+  width: 100%;
+}
+@media screen and (max-width: 720px) {
+  .partner {
+    width: 70%;
+  }
+}

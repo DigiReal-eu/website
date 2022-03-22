@@ -1,0 +1,21 @@
+.partners {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+}
+
+.partnerGrid {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
+}
+
+@media screen and (max-width: 720px) {
+  .partnerGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
