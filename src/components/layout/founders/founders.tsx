@@ -1,6 +1,5 @@
 import React from 'react';
 import './founders.scss';
-
 import BuasLogo from '../../../assets/images/breda-university.png';
 import FontysLogo from '../../../assets/images/fontys-hogeschool-ict.png';
 import MindlabsLogo from '../../../assets/images/mindlabs.png';

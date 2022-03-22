@@ -1,5 +1,53 @@
 .footer {
-    &__image {
-        width: 25%;
-    }
+  width: 100%;
+  background-color: #E6E6E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  &__image {
+    width: 250px;
+  }
+
+  & .footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
+
+.spacer {
+  display: flex;
+  border-left: 2px solid #CECECE;
+  height: 150px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-email {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    flex-direction: column;
+
+    &__image {
+      margin-top: 10px;
+      max-width: 250px;
+      width: 60vw;
+    }
+  }
+  .spacer {
+    height: auto;
+    border-left: 0;
+    border-top: 1px solid #CECECE;
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
