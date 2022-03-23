@@ -1,20 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import Footer from '../../components/layout/footer/footer';
 import Founders from '../../components/layout/founders/founders';
 import Header from '../../components/layout/header/header';
 import './home.scss';
 
 function Home() {
+    const { t, i18n } = useTranslation();
+    const [language, setLanguage] = useState('nl');
+    const [languageFull, setLanguageFull] = useState('English');
+
+    const toggleLanguage = () => {
+        if (language === 'nl') {
+            i18n.changeLanguage('en').then(() => {
+                setLanguage('en');
+                setLanguageFull('Nederlands');
+            });
+        }
+        if (language === 'en') {
+            i18n.changeLanguage('nl').then(() => {
+                setLanguage('nl');
+                setLanguageFull('English');
+            });
+        }
+    };
+
     return (
         <div className="home">
             <Header />
+
             <div className="pageHeader">
-                <button type="button" className="language">English/Dutch</button>
+                <button
+                    type="button"
+                    className="language"
+                    onClick={toggleLanguage}
+                >
+                    {languageFull}
+                </button>
             </div>
 
             <div className="container">
                 <div className="title">
-                    <p>Welkom bij</p>
+                    <p>{t('home.welcome_to')}</p>
                     <h1>
                         DIGI
                         <b>REAL</b>
@@ -23,34 +51,60 @@ function Home() {
 
                 <div className="content">
                     <p className="content">
-                        Zet twee onderwijsinstellingen die partner zijn van MindLabs
-                        samen in een ruimte, en wat volgt is een prachtig
-                        samenwerkingsverband. Een waardoor een netwerk opgezet wordt
-                        waar bedrijven uit het zuiden van Nederland kunnen samenwerken
-                        op het gebied van VR, AR en Al. En dat onder de noemer
-                        DIGIREAL-XL. Hiermee bouwen Fontys ICT, Breda University of
-                        Applied Sciences én MindLabs met andere partijen aan een
-                        research, development & innovationcentrum. Het thema hierbij:
-                        Digital Realities voor sociaaleconomische impact. Kartrekkers
-                        van het project zijn Fontys ICT-lector Mark de Graaf en
-                        BUas-lector Igor Mayer. Mayer trapt af: &quot;Technologie
-                        ontwikkelt zich in een razendsnel tempo en is nu al ontzettend
-                        ingewikkeld. Bedrijven realiseren zich maar al te goed dat ze
-                        hier iets mee moeten. Maar wat? Dat weten ze nog niet. Daar komt
-                        DIGIREAL-XL in beeld.&quot; De Graaf vult aan: &quot;Met
-                        DIGIREAL-XL willen we een sterke onderzoeksgroep opzetten die
-                        zich richt op Digital Realities. Een waar instanties,
-                        organisaties en bedrijven kunnen aankloppen wanneer ze
-                        ambitieuze vragen hebben over mixed realities. Zo slaan we een
-                        brug tussen bedrijven die goed zijn in een bepaald onderdeel van
-                        Digital Realities. Van het maken van games en het digitaliseren
-                        tot aan het verwerken van data. Door die specialismen samen te
-                        brengen binnen één grote netwerkorganisatie kunnen we innovaties
-                        ontwikkelen die nodig zijn om te slagen op digitaal
-                        gebied.&quot;
+                        <Trans i18nKey="home.who_are_we">
+                            <a
+                                href="https://www.nwo.nl/en/key-enabling-technologies"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <a
+                                href="https://www.buas.nl/onderzoek"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <a
+                                href="https://www.sia-projecten.nl/project/digireal-xl-research-development-and-innovation-center-on-digital-realities-for-societal-economic-impact"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <a
+                                href="https://regieorgaan-sia.nl/financiering/sprong/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <a
+                                href="https://www.mind-labs.eu/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <a
+                                href="https://www.digishape.nl/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <a
+                                href="https://smartvenue.nl/chronosphere/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                {' '}
+                            </a>
+                            <Link to="/partners" />
+                        </Trans>
                     </p>
                 </div>
-
             </div>
 
             <Founders />

@@ -15,26 +15,29 @@ function Partners() {
             setPartners(partner);
         });
     }, []);
+
     return (
-        <>
+        <div className="partners">
             <Header />
-            <div className="partners">
+            <div className="container">
                 <div className="partnerGrid">
-                    {partners ? partners.map((partner: partnerInterface) => (
-                        <Partner
-                            key={partner._id}
-                            _id={partner._id}
-                            partnerName={partner.partnerName}
-                            partnerImage={partner.partnerImage}
-                            partnerUrl={partner.partnerUrl}
-                        />
-                    ))
-                        : <p>Loading...</p>}
+                    {partners ? (
+                        partners.map((partner: partnerInterface) => (
+                            <Partner
+                                key={partner._id}
+                                _id={partner._id}
+                                partnerName={partner.partnerName}
+                                partnerImage={partner.partnerImage}
+                                partnerUrl={partner.partnerUrl}
+                            />
+                        ))
+                    ) : (
+                        <p>Loading...</p>
+                    )}
                 </div>
             </div>
             <Footer />
-        </>
-
+        </div>
     );
 }
 

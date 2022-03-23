@@ -1,8 +1,11 @@
 import React from 'react';
 import './footer.scss';
+import { useTranslation } from 'react-i18next';
 import DigirealLogo from '../../../assets/images/digireal_logo_full.png';
 
 function Footer() {
+    const { t } = useTranslation();
+
     return (
         <div className="footer">
             <div className="footer-left">
@@ -11,13 +14,15 @@ function Footer() {
                     src={DigirealLogo}
                     alt="Digireal Logo"
                 />
-                <p>More coming soon!</p>
+                <p>{t('home.coming_soon')}</p>
             </div>
             <div className="spacer" />
             <div className="footer-right">
                 <p>
                     Contact: &nbsp;&nbsp;
-                    <a className="footer-email" href="mailto:info@example.com">info@example.com</a>
+                    <a className="footer-email" href="mailto:info@example.com">
+                        info@example.com
+                    </a>
                 </p>
             </div>
         </div>
