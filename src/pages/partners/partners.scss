@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    padding: 2em;
+    margin: auto;
+}
+
+.partnerGrid {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
+}
+
+@media screen and (max-width: 720px) {
+    .partnerGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
