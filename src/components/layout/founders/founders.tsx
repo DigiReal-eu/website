@@ -1,10 +1,10 @@
 import React from 'react';
 import './founders.scss';
 import { useTranslation } from 'react-i18next';
-import BuasLogo from '../../../assets/images/breda-university.png';
-import FontysLogo from '../../../assets/images/fontys-hogeschool-ict.png';
-import MindlabsLogo from '../../../assets/images/mindlabs.png';
-import SiaLogo from '../../../assets/images/sia-regieorgaan.png';
+import BuasLogo from '../../../assets/images/Logo BUas_Black.png';
+import FontysLogo from '../../../assets/images/fontysict-logo-black-nl.png';
+import MindlabsLogo from '../../../assets/images/Logo_Mindlabs-black.jpg';
+import SiaLogo from '../../../assets/images/Logo SIA_zwart.png';
 import SectionTitle from '../../shared/section-title/section-title';
 
 function Founders() {
