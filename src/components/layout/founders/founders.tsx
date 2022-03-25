@@ -29,8 +29,13 @@ function Founders() {
                     src={MindlabsLogo}
                     alt="Mindlabs Logo"
                 />
-                <img className="founders__image" src={SiaLogo} alt="Sia Logo" />
+                <img
+                    className="founders__image"
+                    src={SiaLogo}
+                    alt="Sia Logo"
+                />
             </div>
+            <button type="button" className="founders__button">Bekijk partners </button>
         </div>
     );
 }

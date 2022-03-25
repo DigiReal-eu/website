@@ -5,4 +5,18 @@
         margin-left: 2em;
         margin-bottom: 6em;
     }
+
+    .founders__button{
+        font-size: large;
+        margin: auto auto 5em auto;
+        border-radius: 2em;
+        border-style: solid;
+        border-color: black;
+        background-color: transparent;
+        padding: 0.5em 1em 0.5em 1em;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
 }
