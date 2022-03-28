@@ -1,11 +1,9 @@
 import React from 'react';
 import './founders.scss';
 import { useTranslation } from 'react-i18next';
-import BuasLogo from '../../../assets/images/Logo BUas_Black.png';
-import FontysLogo from '../../../assets/images/fontysict-logo-black-nl.png';
-import MindlabsLogo from '../../../assets/images/Logo_Mindlabs-black.jpg';
-import SiaLogo from '../../../assets/images/Logo SIA_zwart.png';
 import SectionTitle from '../../shared/section-title/section-title';
+import {BuasLogo, SiaLogo, MindlabsLogo, FontysLogo} from "./images";
+import {Link} from "react-router-dom";
 
 function Founders() {
     const { t } = useTranslation();
@@ -35,7 +33,7 @@ function Founders() {
                     alt="Sia Logo"
                 />
             </div>
-            <button type="button" className="founders__button">Bekijk partners </button>
+            <Link style={{textDecoration: 'none'}} to="/partners" className="founders__button">{t('founders.button')}</Link>
         </div>
     );
 }
