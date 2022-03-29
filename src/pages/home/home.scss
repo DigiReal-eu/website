@@ -6,28 +6,6 @@
 
     .container {
         margin-bottom: 4em;
-
-        .title {
-            max-width: 70em;
-            margin: auto auto 1em auto;
-            text-align: left;
-
-            h1 {
-                font-size: 5rem;
-                font-weight: 200;
-                margin: 0 0 0 2%;
-                line-height: 0.7em;
-                color: #0d294a;
-                b {
-                    font-weight: 600;
-                }
-            }
-            p {
-                font-size: 1.5rem;
-                margin: 0 0 0 2%;
-                font-weight: 300;
-            }
-        }
         .content {
             max-width: 60em;
             display: inline-block;

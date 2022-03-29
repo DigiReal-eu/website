@@ -41,14 +41,6 @@ function Home() {
             </div>
 
             <div className="container">
-                <div className="title">
-                    <p>{t('home.welcome_to')}</p>
-                    <h1>
-                        DIGI
-                        <b>REAL</b>
-                    </h1>
-                </div>
-
                 <div className="content">
                     <p className="content">
                         <Trans i18nKey="home.who_are_we">
