@@ -1,5 +1,5 @@
 .founders {
-    padding: 2em;
+    padding-bottom: 3em;
     &__image {
         width: 16em;
         margin-right: 2em;
@@ -7,7 +7,7 @@
         margin-bottom: 6em;
     }
 
-    .founders__button{
+    .founders__button {
         font-size: large;
         color: black;
         font-style: normal;
@@ -17,7 +17,7 @@
         border-color: black;
         background-color: transparent;
         padding: 0.5em 1em 0.5em 1em;
-        &:hover{
+        &:hover {
             cursor: pointer;
             transition: ease-in 150ms;
             background-color: black;

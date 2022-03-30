@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './partners.scss';
+import { t } from 'i18next';
 import Footer from '../../components/layout/footer/footer';
 import Header from '../../components/layout/header/header';
 import client from '../../config/sanityConfig';
 import { partnerInterface } from '../../Shared/interfaces/partnerInterface';
 import Partner from '../../components/partner/partner';
+import SectionTitle from '../../components/shared/section-title/section-title';
 
 function Partners() {
     const [partners, setPartners] = useState<partnerInterface[] | undefined>();
@@ -20,6 +22,10 @@ function Partners() {
         <div className="partners">
             <Header />
             <div className="container">
+                {/* <SectionTitle title={t('partners.our_partners')} /> */}
+
+                <SectionTitle>{t('partners.our_partners')}</SectionTitle>
+
                 <div className="partnerGrid">
                     {partners ? (
                         partners.map((partner: partnerInterface) => (
