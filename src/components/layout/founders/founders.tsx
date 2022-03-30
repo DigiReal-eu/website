@@ -3,7 +3,9 @@ import './founders.scss';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../../shared/section-title/section-title';
-import { BuasLogo, SiaLogo, MindlabsLogo, FontysLogo } from './images';
+import {
+    BuasLogo, SiaLogo, MindlabsLogo, FontysLogo,
+} from './images';
 
 function Founders() {
     const { t } = useTranslation();

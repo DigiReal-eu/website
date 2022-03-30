@@ -4,7 +4,9 @@ import imageUrlBuilder from '@sanity/image-url';
 import { PartnerImage, partnerInterface } from '../../Shared/interfaces/partnerInterface';
 import client from '../../config/sanityConfig';
 
-function Partners({ _id, partnerName, partnerImage, partnerUrl }: partnerInterface) {
+function Partners({
+    _id, partnerName, partnerImage, partnerUrl,
+}: partnerInterface) {
     const builder = imageUrlBuilder(client);
 
     function urlFor(source: PartnerImage) {

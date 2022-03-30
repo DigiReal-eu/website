@@ -7,7 +7,7 @@ import Header from '../../components/layout/header/header';
 import './home.scss';
 
 function Home() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const [language, setLanguage] = useState('nl');
     const [languageFull, setLanguageFull] = useState('English');
 
