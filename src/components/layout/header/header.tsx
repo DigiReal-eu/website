@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.scss';
 import '../../../App.scss';
-import HeaderLogo from '../../../assets/images/digireal_logo_small.png';
+import HeaderLogo from '../../../assets/images/digireal_logo_full.png';
 
 function Header() {
     return (
