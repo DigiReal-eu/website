@@ -7,7 +7,7 @@ describe('home.tsx', () => {
     let page;
 
     beforeAll(async () => {
-        browser = await puppeteer.launch(); 
+        browser = await puppeteer.launch();
         page = await browser.newPage();
         await page.goto('http://localhost:3000');
     });
@@ -17,7 +17,7 @@ describe('home.tsx', () => {
         await page.waitForSelector('.language');
 
         // Get the string values when page is on Dutch
-        const textNL = await page.$eval('.title', (e) => e.textContent); 
+        const textNL = await page.$eval('.title', (e) => e.textContent);
         const buttonNL = await page.$eval('.language', (e) => e.textContent);
 
         // Change language to English
