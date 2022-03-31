@@ -1,18 +1,18 @@
 import puppeteer from 'puppeteer';
 
-jest.setTimeout(30000);
-
 describe('home.tsx', () => {
     let browser;
     let page;
 
     beforeAll(async () => {
-        browser = await puppeteer.launch();
+        browser = await puppeteer.launch({
+            headless: false
+        });
         page = await browser.newPage();
         await page.goto('http://localhost:3000');
     });
 
-    it('has a change language button that switches between Dutch and English and saves my selected language on page refresh', async () => {
+    it('has a change language button that switches between Dutch and English and saves the selected language on page refresh', async () => {
         await page.waitForSelector('.title');
         await page.waitForSelector('.language');
 
