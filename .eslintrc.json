@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": ["plugin:react/recommended", "airbnb", "plugin:@typescript-eslint/recommended"],
     "settings": {
@@ -25,7 +26,7 @@
         "indent": ["error", 4],
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
-        "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
         "import/extensions": [
             "error",
             "ignorePackages",
@@ -38,7 +39,8 @@
             "off",
             {
                 "handlers": ["onClick"]
-            }],
+            }
+        ],
         "jsx-a11y/click-events-have-key-events": "off"
     }
 }
