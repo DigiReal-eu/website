@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/layout/footer/footer';
 import Founders from '../../components/layout/founders/founders';
@@ -10,17 +10,20 @@ function Home() {
     const { i18n } = useTranslation();
     const [language, setLanguage] = useState('nl');
     const [languageFull, setLanguageFull] = useState('English');
-
     const toggleLanguage = () => {
-        if (language === 'nl') {
+        if (language === 'nl-NL') {
             i18n.changeLanguage('en').then(() => {
                 setLanguage('en');
                 setLanguageFull('Nederlands');
             });
-        }
-        if (language === 'en') {
-            i18n.changeLanguage('nl').then(() => {
-                setLanguage('nl');
+        } else if (language === 'en') {
+            i18n.changeLanguage('nl-NL').then(() => {
+                setLanguage('nl-NL');
+                setLanguageFull('English');
+            });
+        } else {
+            i18n.changeLanguage('nl-NL').then(() => {
+                setLanguage('nl-NL');
                 setLanguageFull('English');
             });
         }
