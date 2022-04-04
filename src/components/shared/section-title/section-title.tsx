@@ -1,9 +1,7 @@
 import React from 'react';
 import './section-title.scss';
-import { TitleInterface } from '../../../Shared/interfaces/titleInterface';
 
-function SectionTitle({ children }: { children: any }) {
-    // { title }: TitleInterface
+function SectionTitle({ children }: { children: React.ReactChildren }) {
     return (
         <div className="section">
             <div className="circle left"> </div>

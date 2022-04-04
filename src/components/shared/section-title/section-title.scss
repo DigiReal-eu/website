@@ -1,3 +1,4 @@
+//ToDo: fix this file.
 .section{
   --lineWidth: 30vw;
 
@@ -94,6 +95,7 @@
 
       span:before,
       span:after {
+        //Display: none
         visibility: hidden;
       }
     }
