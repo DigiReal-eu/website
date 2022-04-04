@@ -26,12 +26,16 @@
 .spacer {
     display: flex;
     border-left: 2px solid #cecece;
-    height: 150px;
+    height: 200px;
     margin: 10px;
     margin-left: 40px;
     margin-right: 40px;
     justify-content: center;
     align-items: center;
+}
+
+.funder__image {
+    height: 175px;
 }
 
 .footer-email {

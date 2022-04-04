@@ -17,15 +17,11 @@
         border-color: black;
         background-color: transparent;
         padding: 0.5em 1em 0.5em 1em;
-        text-decoration: none;
         &:hover {
             cursor: pointer;
             transition: ease-in 150ms;
             background-color: black;
             color: white;
-        }
-        &__icon {
-            margin-left: 10px;
         }
     }
 }
