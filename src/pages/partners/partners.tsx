@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './partners.scss';
 import { t } from 'i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/layout/footer/footer';
 import Header from '../../components/layout/header/header';
 import client from '../../config/sanityConfig';
@@ -11,6 +14,7 @@ import SectionTitle from '../../components/shared/section-title/section-title';
 function Partners() {
     const [partners, setPartners] = useState<partnerInterface[] | undefined>();
     const query = '*[_type == "partner"] {_id, partnerName, partnerUrl, partnerImage}';
+    const navigate = useNavigate();
 
     useEffect(() => {
         client.fetch(query, {}).then((partner: partnerInterface[]) => {
@@ -21,6 +25,9 @@ function Partners() {
     return (
         <div className="partners">
             <Header />
+            <button className="back__button" type="button" onClick={() => navigate('/')}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
             <div className="container">
                 {/* <SectionTitle title={t('partners.our_partners')} /> */}
 
