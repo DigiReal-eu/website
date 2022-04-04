@@ -7,10 +7,9 @@ import Header from '../../components/layout/header/header';
 import './home.scss';
 
 function Home() {
-    const { t, i18n } = useTranslation();
-    const [language, setLanguage] = useState(i18n.language);
-    const [languageFull, setLanguageFull] = useState(i18n.language === 'nl-NL' ? 'English' : 'Nederlands');
-
+    const { i18n } = useTranslation();
+    const [language, setLanguage] = useState('nl');
+    const [languageFull, setLanguageFull] = useState('English');
     const toggleLanguage = () => {
         if (language === 'nl-NL') {
             i18n.changeLanguage('en').then(() => {
@@ -35,39 +34,19 @@ function Home() {
             <Header />
 
             <div className="pageHeader">
-                <button
-                    type="button"
-                    className="language"
-                    onClick={toggleLanguage}
-                >
+                <button type="button" className="language" onClick={toggleLanguage}>
                     {languageFull}
                 </button>
             </div>
 
             <div className="container">
-                <div className="title">
-                    <p>{t('home.welcome_to')}</p>
-                    <h1>
-                        DIGI
-                        <b>REAL</b>
-                    </h1>
-                </div>
-
                 <div className="content">
                     <p className="content">
                         <Trans i18nKey="home.who_are_we">
-                            <a
-                                href="https://www.nwo.nl/en/key-enabling-technologies"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href="https://www.nwo.nl/en/key-enabling-technologies" target="_blank" rel="noreferrer">
                                 {' '}
                             </a>
-                            <a
-                                href="https://www.buas.nl/onderzoek"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href="https://www.buas.nl/onderzoek" target="_blank" rel="noreferrer">
                                 {' '}
                             </a>
                             <a
@@ -77,32 +56,16 @@ function Home() {
                             >
                                 {' '}
                             </a>
-                            <a
-                                href="https://regieorgaan-sia.nl/financiering/sprong/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href="https://regieorgaan-sia.nl/financiering/sprong/" target="_blank" rel="noreferrer">
                                 {' '}
                             </a>
-                            <a
-                                href="https://www.mind-labs.eu/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href="https://www.mind-labs.eu/" target="_blank" rel="noreferrer">
                                 {' '}
                             </a>
-                            <a
-                                href="https://www.digishape.nl/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href="https://www.digishape.nl/" target="_blank" rel="noreferrer">
                                 {' '}
                             </a>
-                            <a
-                                href="https://smartvenue.nl/chronosphere/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a href="https://smartvenue.nl/chronosphere/" target="_blank" rel="noreferrer">
                                 {' '}
                             </a>
                             <Link to="/partners" />
@@ -112,6 +75,7 @@ function Home() {
             </div>
 
             <Founders />
+
             <Footer />
         </div>
     );

@@ -1,35 +1,28 @@
 .header {
-    text-align: center;
     align-content: center;
     background-image: url("../../../assets/images/header-background.png");
-    background-position: center;
+    background-position: top;
     background-size: cover;
     .subHeader{
-        width: 80%;
+        width: auto;
         height: auto;
-        margin: auto;
-        background:radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 7%, rgba(0, 0, 0, 0) 60%, rgba(238, 130, 238, 0) 100%);
     }
 
     &__images {
-        max-width: 20em;
+        max-width: 40em;
         display: inline-block;
         margin: auto;
     }
 
     &__logo{
         width: 100%;
-        padding: 10em 0 10em 0;
+        padding: 5em 0 5em 0;
     }
 
 }
 
 @media screen and (max-width: 64em) {
     .header{
-        .subHeader{
-            width: 100%;
-            background:radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 7%, rgba(0, 0, 0, 0) 60%, rgba(238, 130, 238, 0) 100%);
-        }
         &__images {
             display: inline-block;
             width: 93%;
@@ -37,12 +30,5 @@
             margin-right: 2em;
         }
     }
-}
 
-@media screen and (max-width: 30em) {
-    .header{
-        .subHeader{
-            background: radial-gradient(circle, rgba(255, 255, 255, 1) 7%, rgba(0, 0, 0, 0) 65%, rgba(238, 130, 238, 0) 100%);;
-        }
-    }
 }

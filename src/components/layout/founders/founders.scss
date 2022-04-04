@@ -1,8 +1,33 @@
 .founders {
-    &__image {
-        width: 16em;
-        margin-right: 2em;
-        margin-left: 2em;
-        margin-bottom: 6em;
+  padding-bottom: 3em;
+
+  &__image {
+    width: 16em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 6em;
+  }
+
+  .founders__button {
+    font-size: large;
+    color: black;
+    font-style: normal;
+    margin: auto auto 5em auto;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: black;
+    background-color: transparent;
+    padding: 0.5em 1em 0.5em 1em;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      transition: ease-in 150ms;
+      background-color: black;
+      color: white;
     }
+    &__icon {
+      margin-left: 10px;
+    }
+  }
 }

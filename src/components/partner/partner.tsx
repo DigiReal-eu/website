@@ -5,10 +5,7 @@ import { PartnerImage, partnerInterface } from '../../Shared/interfaces/partnerI
 import client from '../../config/sanityConfig';
 
 function Partners({
-    _id,
-    partnerName,
-    partnerImage,
-    partnerUrl,
+    _id, partnerName, partnerImage, partnerUrl,
 }: partnerInterface) {
     const builder = imageUrlBuilder(client);
 
@@ -21,9 +18,8 @@ function Partners({
 
     return (
         <div key={_id} className="partner" onClick={partnerWebsite}>
-            <img className="partnerImage" src={urlFor(partnerImage).width(200).url()} alt={partnerName} />
+            <img className="partnerImage" src={urlFor(partnerImage).height(80).url()} alt={partnerName} />
         </div>
-
     );
 }
 

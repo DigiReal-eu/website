@@ -1,3 +1,4 @@
+//ToDo: fix this file.
 .section{
   --lineWidth: 30vw;
 
@@ -5,7 +6,6 @@
     margin: auto;
     position: static;
     display: inline-block;
-    font-weight: normal;
 
     span {
       display: inline-block;
@@ -42,7 +42,7 @@
     border-width: 4px;
     border-style: solid;
     width: 20px;
-    top: 0;
+    top: 6px;
     height: 20px;
     display: inline-block;
     overflow-x: hidden;
@@ -56,7 +56,7 @@
     right: calc(var(--lineWidth) + 2px);
   }
 
-  margin: 4em 2em 2em 2em;
+  margin: 4em 2em 4em 2em;
   display: block;
 }
 
@@ -74,36 +74,38 @@
 
 @media screen and (max-width: 60em) {
   .section {
-    --lineWidth: 35vw;
-    .title{
-      font-size: medium;
-      span{
-        width: 10em;
-      }
-      span:before,
-      span:after{
-        height: 3px;
-      }
-    }
-    .circle{
-      width: 15px;
-      height: 15px;
-      border-width: 3px;
-      top: 4px;
-    }
+    --lineWidth: 10vw;
   }
 }
 
-@media screen and (max-width: 50em){
+@media screen and (max-width: 45em){
   .section{
-    --lineWidth: 30vw;
+    --lineWidth: 3vw;
   }
 }
 
 @media screen and (max-width: 38em) {
   .section {
     margin: 4em 0 4em 0;
-    --lineWidth: 20vw;
+    --lineWidth: 5vw;
+    .title {
+      span {
+        width: fit-content;
+      }
+
+      span:before,
+      span:after {
+        //Display: none
+        visibility: hidden;
+      }
+    }
+
+    .right{
+      left: 0.5em;
+    }
+    .left{
+      right: 0.5em;
+    }
   }
 }
 
