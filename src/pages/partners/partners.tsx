@@ -24,10 +24,10 @@ function Partners() {
 
     return (
         <div className="partners">
-            <Header />
             <button className="back__button" type="button" onClick={() => navigate('/')}>
-                <FontAwesomeIcon icon={faChevronLeft} />
+                <FontAwesomeIcon icon={faChevronLeft} size="4x" />
             </button>
+            <Header />
             <div className="container">
                 {/* <SectionTitle title={t('partners.our_partners')} /> */}
 
