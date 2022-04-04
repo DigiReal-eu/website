@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import SectionTitle from '../../shared/section-title/section-title';
 import {
-    BuasLogo, MindlabsLogo, FontysLogo, SiaLogo,
+    BuasLogo, MindlabsLogo, FontysLogo,
 } from '../../../Shared/images';
 
 function Founders() {
@@ -17,7 +17,6 @@ function Founders() {
             <SectionTitle>{t('home.founders')}</SectionTitle>
 
             <div className="founders__images">
-                <img className="founders__image" src={SiaLogo} alt="Sia Logo" />
                 <img className="founders__image" src={BuasLogo} alt="Buas Logo" />
                 <img className="founders__image" src={FontysLogo} alt="Fontys Logo" />
                 <img className="founders__image" src={MindlabsLogo} alt="Mindlabs Logo" />
