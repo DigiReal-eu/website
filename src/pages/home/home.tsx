@@ -8,7 +8,7 @@ import './home.scss';
 
 function Home() {
     const { i18n } = useTranslation();
-    
+
     const [language, setLanguage] = useState(i18n.language);
     const [languageFull, setLanguageFull] = useState(i18n.language === 'nl-NL' ? 'English' : 'Nederlands');
 
