@@ -14,6 +14,9 @@
 
   &:hover {
     transform: scale(1.05);
+    .partnerImage {
+      filter:grayscale(0%);
+    }
   }
 }
 
@@ -22,7 +25,9 @@
   max-height: 100%;
   max-width: 100%;
   width: auto;
+  filter: grayscale(100%);
 }
+
 @media screen and (max-width: 720px) {
   .partner {
     width: 70%;

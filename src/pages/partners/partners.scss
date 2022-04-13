@@ -37,9 +37,10 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 64em) {
     .back__button {
-        display: none;
+        top: 10vw;
+        font-size: 1vw;
     }
     .partnerGrid {
         display: flex;
