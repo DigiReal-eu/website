@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { t } from 'i18next';
 import Footer from '../../components/layout/footer/footer';
 import Founders from '../../components/layout/founders/founders';
 import Header from '../../components/layout/header/header';
+import SectionTitle from '../../components/shared/section-title/section-title';
 import './home.scss';
 
 function Home() {
     const { i18n } = useTranslation();
 
     const [language, setLanguage] = useState(i18n.language);
-    const [languageFull, setLanguageFull] = useState(i18n.language === 'nl-NL' ? 'English' : 'Nederlands');
+    const [languageFull, setLanguageFull] = useState(i18n.language.includes('nl') ? 'English' : 'Nederlands');
 
     const toggleLanguage = () => {
-        if (language === 'nl-NL') {
+        if (language.includes('nl')) {
             i18n.changeLanguage('en').then(() => {
                 setLanguage('en');
                 setLanguageFull('Nederlands');
@@ -75,7 +77,7 @@ function Home() {
                     </p>
                 </div>
             </div>
-
+            <SectionTitle>{t('home.founders')}</SectionTitle>
             <Founders />
 
             <Footer />

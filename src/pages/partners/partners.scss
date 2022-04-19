@@ -1,50 +1,54 @@
 .back__button {
-    position: absolute;
-    display: flex;
-    top: 275px;
-    margin-left: 2em;
-    background: none;
-    border: solid 2px white;
-    color: white;
-    padding: 1em 1.8em;
-    border-radius: 25%;
-    cursor: pointer;
-    transition: all ease-in-out 200ms;
-    &:hover {
-     background: #ffffff60;
-    }
+  position: absolute;
+  display: flex;
+  top: 275px;
+  margin-left: 2em;
+  background: none;
+  border: solid 2px white;
+  color: white;
+  padding: 1em 1.8em;
+  border-radius: 25%;
+  cursor: pointer;
+  transition: background ease-in-out 200ms;
+
+  &:hover {
+    background: #ffffff60;
+  }
 }
 
 .partners {
-    width: 100%;
-    text-align: center;
-    align-content: center;
-    overflow-x: hidden;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  overflow-x: hidden;
 }
 
 .container {
-    position: relative;
-    width: 80%;
-    max-width: 1200px;
-    padding: 2em;
-    margin: auto;
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  padding: 2em;
+  margin: auto;
 }
 
 .partnerGrid {
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
 }
 
 @media screen and (max-width: 64em) {
-    .back__button {
-        top: 10vw;
-        font-size: 1vw;
-    }
-    .partnerGrid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .back__button {
+    top: 10vw;
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .partnerGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
