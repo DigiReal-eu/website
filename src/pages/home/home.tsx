@@ -12,10 +12,10 @@ function Home() {
     const { i18n } = useTranslation();
 
     const [language, setLanguage] = useState(i18n.language);
-    const [languageFull, setLanguageFull] = useState(i18n.language === 'nl-NL' ? 'English' : 'Nederlands');
+    const [languageFull, setLanguageFull] = useState(i18n.language.includes('nl') ? 'English' : 'Nederlands');
 
     const toggleLanguage = () => {
-        if (language === 'nl-NL') {
+        if (language.includes('nl')) {
             i18n.changeLanguage('en').then(() => {
                 setLanguage('en');
                 setLanguageFull('Nederlands');
