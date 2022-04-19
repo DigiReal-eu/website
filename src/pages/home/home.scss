@@ -1,69 +1,49 @@
 .home {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  overflow-x: hidden;
+
+  .container {
     text-align: center;
-    align-content: center;
-    overflow-x: hidden;
 
-    .container {
-        .content {
-            max-width: 60em;
-            display: inline-block;
-            margin: auto;
-            p {
-                text-align: left;
-                box-sizing: border-box;
-            }
-        }
-    }
+    .content {
+      max-width: 60em;
+      display: inline-block;
+      margin: auto;
 
-    .pageHeader {
-        width: 100vw;
-        display: block;
-        .language {
-            margin: 2em 3em 0 auto;
-            padding: 0.8em 2em;
-            background-color: #0d294a;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            animation: ease-in;
-            border-radius: 0.7em;
-            border-color: transparent;
-            display: block;
-            &:hover {
-                background-color: rgba(13, 41, 74, 0.8);
-            }
-        }
+      p {
+        text-align: left;
+        box-sizing: border-box;
+      }
     }
+  }
 
-    .founders {
-        margin-bottom: 1em;
-    }
-}
-@media screen and (max-width: 64em) {
-    .home {
-        .container {
-            margin-left: 2em;
-            margin-right: 2em;
-        }
-        .language {
-            padding: 1.5em 1em;
-        }
-    }
-}
+  .pageHeader {
+    width: 100vw;
+    display: block;
 
-@media screen and (max-width: 30em) {
-    .home {
-        .container {
-            .title {
-                h1 {
-                    margin: 0 0 0 0;
-                    font-size: 16.5vw;
-                }
-                p {
-                    margin: 0 0 0 0;
-                }
-            }
-        }
+    .language {
+      margin: 2em 3em 0 auto;
+      padding: 0.8em 2em;
+      background-color: #0d294a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      animation: ease-in;
+      border-radius: 0.7em;
+      border-color: transparent;
+      display: block;
+
+      &:hover {
+        background-color: rgba(13, 41, 74, 0.8);
+      }
     }
+  }
+
+  .founders {
+    margin-bottom: 1em;
+  }
 }

@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import SectionTitle from '../../shared/section-title/section-title';
 import {
     BuasLogo, MindlabsLogo, FontysLogo,
 } from '../../../Shared/images';
@@ -14,8 +13,6 @@ function Founders() {
 
     return (
         <div className="founders">
-            <SectionTitle>{t('home.founders')}</SectionTitle>
-
             <div className="founders__images">
                 <img className="founders__image" src={BuasLogo} alt="Buas Logo" />
                 <img className="founders__image" src={FontysLogo} alt="Fontys Logo" />

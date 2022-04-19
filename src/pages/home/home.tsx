@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { t } from 'i18next';
 import Footer from '../../components/layout/footer/footer';
 import Founders from '../../components/layout/founders/founders';
 import Header from '../../components/layout/header/header';
+import SectionTitle from '../../components/shared/section-title/section-title';
 import './home.scss';
 
 function Home() {
@@ -75,7 +77,7 @@ function Home() {
                     </p>
                 </div>
             </div>
-
+            <SectionTitle>{t('home.founders')}</SectionTitle>
             <Founders />
 
             <Footer />
