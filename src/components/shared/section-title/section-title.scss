@@ -1,43 +1,34 @@
 //ToDo: fix this file.
 .section{
-  text-align: center;
-  --lineWidth: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .title:before{
+    content: "";
+    flex: 1 1 ;
+    border-bottom: 2px solid;
+    margin: auto 10px auto auto;
+  }
+
+  .title:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid;
+    margin: auto auto auto 10px;
+  }
+
+  .title_container{
+    flex-grow: 3;
+  }
 
   .title{
-    margin: auto;
-    position: static;
-    display: inline-block;
-
-    span {
-      display: inline-block;
-      position: relative;
-      width: 15em;
-      color: #0D294A;
-    }
-
-    span:before,
-    span:after {
-      content: "";
-      position: absolute;
-      top: 0.6em;
-      height: 4px;
-      background-color: #0D294A;
-      width: var(--lineWidth);
-      overflow-x: hidden;
-    }
-
-    span:before {
-      right: 100%;
-      margin-right: 3px;
-    }
-    span:after {
-      left: 100%;
-      margin-left: 3px;
-    }
+    display: flex;
+    flex-direction: row;
   }
 
   .circle{
-    position: relative;
+    align-self: center;
     border-radius: 100%;
     border-color: #0D294A;
     border-width: 4px;
@@ -45,67 +36,17 @@
     width: 20px;
     top: 6px;
     height: 20px;
-    display: inline-block;
-    overflow-x: hidden;
-  }
-
-  .right{
-    left: calc(var(--lineWidth) + 2px);
-  }
-
-  .left{
-    right: calc(var(--lineWidth) + 2px);
+    overflow: hidden;
   }
 
   margin: 4em 2em 4em 2em;
-  display: block;
 }
 
-@media screen and (max-width: 90em) {
-  .section {
-    --lineWidth: 25vw;
-  }
-}
-
-@media screen and (max-width: 75em) {
-  .section {
-    --lineWidth: 20vw;
-  }
-}
-
-@media screen and (max-width: 60em) {
-  .section {
-    --lineWidth: 10vw;
-  }
-}
-
-@media screen and (max-width: 45em){
-  .section{
-    --lineWidth: 3vw;
-  }
-}
-
-@media screen and (max-width: 38em) {
+@media screen and (max-width: 30em) {
   .section {
     margin: 4em 0 4em 0;
-    --lineWidth: 5vw;
     .title {
-      span {
-        width: fit-content;
-      }
-
-      span:before,
-      span:after {
-        //Display: none
-        visibility: hidden;
-      }
-    }
-
-    .right{
-      left: 0.5em;
-    }
-    .left{
-      right: 0.5em;
+      font-size: 27px;
     }
   }
 }
