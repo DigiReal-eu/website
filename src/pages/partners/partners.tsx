@@ -27,9 +27,10 @@ function Partners() {
                 <FontAwesomeIcon icon={faChevronLeft} size="4x" />
             </button>
             <Header />
-            <div className="container">
+            <div className="p2">
                 <SectionTitle>{t('partners.our_partners')}</SectionTitle>
-
+            </div>
+            <div className="container">
                 <div className="partnerGrid">
                     {partners ? (
                         partners.map((partner: partnerInterface) => (

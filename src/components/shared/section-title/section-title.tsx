@@ -5,9 +5,9 @@ function SectionTitle({ children }: { children: React.ReactChildren }) {
     return (
         <div className="section">
             <div className="circle left"> </div>
-            <h1 className="title">
-                <span>{children}</span>
-            </h1>
+            <div className="title_container">
+                <h1 className="title">{children}</h1>
+            </div>
             <div className="circle right"> </div>
         </div>
     );
