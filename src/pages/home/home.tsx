@@ -77,7 +77,9 @@ function Home() {
                     </p>
                 </div>
             </div>
-            <SectionTitle>{t('home.founders')}</SectionTitle>
+            <div className="p2">
+                <SectionTitle>{t('home.founders')}</SectionTitle>
+            </div>
             <Founders />
 
             <Footer />
